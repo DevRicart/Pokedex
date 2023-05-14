@@ -1,0 +1,163 @@
+  /* ======= SCROLL BAR ======= */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #f1e9e9;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #582965;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+@font-face {
+	font-family: 'poke';
+	src: url(./assets/PKMN\ RBYGSC.ttf)  format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	font-family: 'poke', sans-serif;
+
+	max-width: 1280px;
+	margin: 0 auto;
+
+	background-color: #5e5b5bad;
+	color: #333333;
+}
+
+body.dark-mode {
+  background-color: #212121;
+	color: #f5f5f5;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	padding: 25px;
+}
+
+header .logo,
+header .button-image {
+	width: 30px;
+	transition: 0.2s ease-in-out;
+}
+
+header #change-button {
+	background: none;
+	border: none;
+}
+
+header .logo:hover,
+header .button-image:hover,
+main .pokemon-card:hover {
+	transform: scale(1.05);
+	cursor: pointer;
+}
+
+main {
+	padding: 25px;
+}
+
+main .pokemon-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+	justify-content: center;
+}
+
+main .pokemon-card {
+	background-color: #d8e3ec;
+	width: 200px;
+	padding: 15px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
+	border-radius: 15px;
+	transition: 0.2s ease-in-out;
+}
+
+main .pokemon-card:hover {
+	background-color: #96d9d6;
+}
+
+.dark-mode .pokemon-card {
+	background-color: #a8a8a8;
+}
+
+main .pokemon-card .informations {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	
+	border: 1px solid #333333;
+	border-radius: 10px;
+}
+
+main .pokemon-card .informations span {
+	padding: 5px;
+	font-size: 17px;
+}
+
+main .pokemon-card .gif {
+	width: 60px;
+	height: 60px;
+}
+
+main .pokemon-card .types {
+	display: flex;
+
+	gap: 10px;
+}
+
+main .pokemon-card .type {
+	padding: 5px;
+	border-radius: 10px;
+}
+
+.grass {
+	background-color: #78C850;
+}
+
+.poison {
+	background-color: #A040A0;
+}
+
+.fire {
+	background-color: #F08030;
+}
+
+.flying {
+	background-color: #A890F0;
+}
+
+.water {
+	background-color: #6890F0;
+}
+
+.bug {
+	background-color: #A8B820;
+}
+
+main .description {
+	max-height: 80px;
+	overflow-y: scroll;
+	font-size: 12px;
+	padding-right: 10px;
+}
